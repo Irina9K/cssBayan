@@ -1,92 +1,85 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    max-width: 90em;
-    margin: 0 auto;
-    padding: 20px;
-   background-color: #f8ebd9;
-    /*color: #2c53ea;*/
+body {
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8ebd9;
 }
 
-
-.label_title{
-    display: block;
-    font-weight: bold;
-    padding:  0.625em 0 0 0;
-    cursor: pointer;
-    transition: 0.2s ;
+.label_title {
+  display: block;
+  font-weight: bold;
+  padding: 0.625em 0 0 0;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.input_checkbox{
-    width: 0;
-    height: 0;
-    -webkit-appearance: none;
-    appearance: none;
+.input_checkbox {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.input_checkbox:checked ~ .label_title{
-    color: #000000;
+.input_checkbox:checked ~ .label_title {
+  color: #000000;
 }
 
-.input_checkbox:checked ~ div{
-   display: flex;
+.input_checkbox:checked ~ div {
+  display: flex;
 }
 
-.input_checkbox:checked ~ .wrapper_label_img img{
-    transform: rotate(45deg);
+.input_checkbox:checked ~ .wrapper_label_img img {
+  transform: rotate(45deg);
 }
 
-.wrapper_item:hover{
-   color: #000000;
-    transition: 0.2s ;
+.wrapper_item:hover {
+  color: #000000;
+  transition: 0.2s;
 }
 
-label{
-    padding:  0.625em 0.625em 0.625em 0;
+label {
+  padding: 0.625em 0.625em 0.625em 0;
 }
 
-.wrapper_item{
-    color: #2c34c5;
+.wrapper_item {
+  color: #2c34c5;
 }
 
-.wrapper_text_img{
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    justify-content: space-between;
+.wrapper_text_img {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
 }
 
-.icon_plus_close{
-    width: 1.875em;
-    height: 1.875em;
-    display: block;
+.icon_plus_close {
+  width: 1.875em;
+  height: 1.875em;
+  display: block;
 }
 
-
- .img_accordion{
-    width: 25em;
-    height: 25em;
-    padding: 0.625em;
-    /*display: none;*/
-     justify-content: center;
+.img_accordion {
+  width: 25em;
+  height: 25em;
+  padding: 0.625em;
+  justify-content: center;
 }
 
-.wrapper_img{
-    display: none;
-    justify-content: center;
-    width: 90em;
+.wrapper_img {
+  display: none;
+  justify-content: center;
+  width: 90em;
 }
 
-.wrapper_text_content .wrapper_label_img{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:85em;
+.wrapper_text_content .wrapper_label_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85em;
 }
-
-
-
