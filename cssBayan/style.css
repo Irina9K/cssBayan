@@ -32,11 +32,11 @@ body{
     color: #000000;
 }
 
-.input_checkbox:checked ~ .img_accordion{
+.input_checkbox:checked ~ div{
    display: flex;
 }
 
-.input_checkbox:checked ~ .icon_plus_close{
+.input_checkbox:checked ~ .wrapper_label_img img{
     transform: rotate(45deg);
 }
 
@@ -50,9 +50,6 @@ label{
 }
 
 .wrapper_item{
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
     color: #2c34c5;
 }
 
@@ -74,13 +71,21 @@ label{
     width: 25em;
     height: 25em;
     padding: 0.625em;
-    display: none;
+    /*display: none;*/
      justify-content: center;
 }
 
 .wrapper_img{
-    display: flex;
+    display: none;
     justify-content: center;
+    width: 90em;
+}
+
+.wrapper_text_content .wrapper_label_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:85em;
 }
 
 
