@@ -5,9 +5,9 @@
 }
 
 body {
-  max-width: 90em;
+  max-width: 50em;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2em;
   background-color: #f8ebd9;
 }
 
@@ -16,7 +16,6 @@ body {
   font-weight: bold;
   padding: 0.625em 0 0 0;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .input_checkbox {
@@ -26,28 +25,49 @@ body {
   appearance: none;
 }
 
+/*.input_checkbox ~ div {*/
+/*  transition: 0.9s;*/
+/*}*/
+
+/*.input_checkbox ~ .label_title {*/
+/*  transition: 0.9s;*/
+/*}*/
+
 .input_checkbox:checked ~ .label_title {
   color: #000000;
 }
 
-.input_checkbox:checked ~ div {
-  display: flex;
+.input_checkbox:hover ~ div .img_accordion {
+  /*display: flex;*/
+  width: 15em;
+  height: 15em;
 }
 
-.input_checkbox:checked ~ .wrapper_label_img img {
+.input_checkbox:hover ~ .wrapper_label_img img {
   transform: rotate(45deg);
 }
 
-.wrapper_item:hover {
+/*.input_checkbox:checked ~ div {*/
+/*  display: flex;*/
+/*}*/
+
+/*.input_checkbox:checked ~ .wrapper_label_img img {*/
+/*  transform: rotate(45deg);*/
+/*}*/
+
+.container_accordion {
+  transition: 0.9s;
+}
+
+.container_accordion:hover {
   color: #000000;
-  transition: 0.2s;
 }
 
 label {
   padding: 0.625em 0.625em 0.625em 0;
 }
 
-.wrapper_item {
+.container_accordion {
   color: #2c34c5;
 }
 
@@ -65,21 +85,68 @@ label {
 }
 
 .img_accordion {
-  width: 25em;
-  height: 25em;
+  display: flex;
+  width: 0;
+  height: 0;
   padding: 0.625em;
   justify-content: center;
+  transition: 0.5s;
 }
 
 .wrapper_img {
-  display: none;
+  display: flex;
   justify-content: center;
-  width: 90em;
+  /*width:20em;*/
 }
 
 .wrapper_text_content .wrapper_label_img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 85em;
+  width: 45em;
+}
+
+@media screen and (max-width: 820px) {
+
+  .input_checkbox:checked ~ div .img_accordion{
+    display: flex;
+    width: 15em;
+    height: 15em;
+  }
+
+  .input_checkbox:checked ~ .wrapper_label_img img {
+    transform: rotate(45deg);
+  }
+
+  .input_checkbox:hover ~ div .img_accordion {
+    /*display: flex;*/
+  /*  width: 0em;*/
+  /*  height: 0em;*/
+  }
+
+  .input_checkbox:hover ~ .wrapper_label_img img {
+    transform: rotate(0deg);
+  }
+
+  .wrapper_text_content .wrapper_label_img {
+    width: 45em;
+  }
+
+  }
+
+@media screen and (max-width: 320px) {
+  h1{
+    font-size: 1.6em;
+  }
+
+  .icon_plus_close {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
+
+  .wrapper_text_content .wrapper_label_img {
+    width: 15em;
+    font-size: 0.9em;
+  }
 }
